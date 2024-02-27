@@ -21,7 +21,7 @@
 
 ##Pendahuluan
 Apa itu Sistem Operasi?<br>
-<strong>Sistem Operasi</strong> adalah perangkat lunak pada lapisan pertama yang ditempatkan pada memori komputer pada saat komputer dinyalakan booting. Sedangkan software-software lainnya dijalankan setelah sistem operasi berjalan, dan sistem operasi akan melakukan layanan inti untuk software-software itu.
+<strong>Sistem Operasi</strong> adalah perangkat lunak pada lapisan pertama yang ditempatkan pada memori komputer pada saat komputer dinyalakan (<i>booting</i>). Sedangkan <i>software</i> lainnya dijalankan setelah sistem operasi berjalan, dan sistem operasi akan melakukan layanan inti untuk software tersebut.
 
 ## Soal
 #### Sebutkan dan jelaskan proses booting !

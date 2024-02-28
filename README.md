@@ -48,18 +48,19 @@ Kemudian, sistem operasi akan mengambil alih kendali dan mulai menjalankan progr
 #### Bagaimana cara install Oracle Virtual Box dan Debian dalam Virtual Box ?
 
 ## Instalasi Oracle Virtual Box
-1. Masuk ke laman [Oracle Virtual box](https://www.virtualbox.org/wiki/Downloads), lalu unduh sesuai sistem operasi yang anda gunakan. Disini saya sudah menambahkan file Oracle Virtualbox beserta file Debian yang nanti akan digunakan![Screenshot](img/Virtual/1.png)
+1. Masuk ke laman [Oracle Virtual box](https://www.virtualbox.org/wiki/Downloads), lalu unduh sesuai sistem operasi yang anda gunakan. Disini saya sudah menambahkan file Oracle Virtualbox beserta file Debian yang nanti akan digunakan
+![Screenshot](img/Virtual/1.png)
 
-2. Buka setup Oracle dan klik Next.
+3. Buka setup Oracle dan klik Next.
 ![Screenshot](img/Virtual/2.png)
 
-3. Klik Install.
+4. Klik Install.
 ![Screenshot](img/Virtual/3.png)
 
-4. Oracle sedang dalam proses pengunduhan.
+5. Oracle sedang dalam proses pengunduhan.
 ![Screenshot](img/Virtual/4.png)
 
-5. Oracle Virtual Box telah di install, klik finish.
+6. Oracle Virtual Box telah di install, klik finish.
 ![Screenshot](img/Virtual/5.png)
 
 6.Tampilan awal akan terlihat seperti ini
@@ -67,122 +68,135 @@ Kemudian, sistem operasi akan mengambil alih kendali dan mulai menjalankan progr
 
 ## Instalasi Linux Debian dalam Oracle Virtual Box
 1. Buka Oracle Virtual Box, lalu klik opsi "New".
-![Screenshot](screenshot/8.png)
+![Screenshot](img/Virtual/6.png)
 
 2. Isi nama, pilih letak penyimpanan Virtual Box, masukkan file ISO debian yang telah diunduh, klik "Skip unattended Installation, dan klik Next.
-![Screenshot](screenshot/9.png)
+![Screenshot](img/Debian/2.png)
 
-3. Isi Username dan hostname dan ubah password, untuk domain name tidak perlu diganti, lalu klik Next. 
-![Screenshot](screenshot/10.png)
+3. Tentukan RAM dan jumlah CPU yang diinginkan, lalu klik Next.
+![Screenshot](img/Debian/3.png)
 
-4. Tentukan RAM dan jumlah CPU yang diinginkan, lalu klik Next.
-![Screenshot](screenshot/11.png)
+4. Tentukan ukuran storage didalam Virtual Machine,  lalu klik Next.
+![Screenshot](img/Debian/4.png)
 
-5. Tentukan ukuran storage didalam Virtual Machine, lalu klik Next.
-![Screenshot](screenshot/12.png)
+5. Dalam tampilan ini, anda dapat melihat ulang pilihan yang anda telah pilih sebelumnya, jika sudah sesuai keinginan, pilih Finish.
+![Screenshot](img/Debian/5.png)
 
-6. Dalam tampilan ini, anda dapat melihat ulang pilihan yang anda telah pilih sebelumnya, jika sudah sesuai keinginan, pilih Finish.
-![Screenshot](screenshot/13.png)
+Ini adalah tampilan Linux Debian pada Oracle
+![Screenshot](img/Debian/6.png)
 
 ## Mengkonfigurasi Debian dalam Oracle Virtual Box
 1. Klik "Start" untuk membuka Virtual Machine.
-![Screenshot](screenshot/14a.png)
+![Screenshot](img/Debian/6.png)
 
 2. Pilih Graphical Install untuk memulai konfigurasi Debian.
-![Screenshot](screenshot/15.png)
+![Screenshot](img/Debian/7.png)
 
 3. Pilih Bahasa, lalu klik continue.
-![Screenshot](screenshot/16.png)
+![Screenshot](img/Debian/8.png)
 
 4. Pilih lokasi, lalu klik continue.
-![Screenshot](screenshot/17.png)
+![Screenshot](img/Debian/9.png)
 
 5. Pilih konfigurasi bahasa Keyboard, lalu klik continue.
-![Screenshot](screenshot/18.png)
+![Screenshot](img/Debian/11.png)
 
 6. Isi Hostname, lalu klik continue.
-![Screenshot](screenshot/19.png)
+![Screenshot](img/Debian/13.png)
 
 7. Untuk nama domain tidak perlu diisi, klik continue.
-![Screenshot](screenshot/20.png)
+![Screenshot](img/Debian/14.png)
 
 8. Isi root password, lalu klik continue.
-![Screenshot](screenshot/21.png)
+![Screenshot](img/Debian/15.png)
 
 9. Isi nama, lalu klik continue.
-![Screenshot](screenshot/22.png)
+![Screenshot](img/Debian/17.png)
 
 10. Isi username, lalu klik continue.
-![Screenshot](screenshot/23.png)
+![Screenshot](img/Debian/18.png)
 
 11. Pilih lokasi jam, lalu klik continue.
-![Screenshot](screenshot/24.png)
+![Screenshot](img/Debian/21.png)
 
 12. Untuk partition disk, pilih manual, lalu klik continue.
-![Screenshot](screenshot/25.png)
+![Screenshot](img/Debian/23.png)
 
 13. Pilih opsi seperti pada gambar dibawah, lalu klik continue.
-![Screenshot](screenshot/26.png)
+![Screenshot](img/Debian/24.png)
 
 14. Pilih "Yes" untuk membuat partition disk baru, lalu klik continue.
-![Screenshot](screenshot/27.png)
+![Screenshot](img/Debian/25.png)
 
 15. Pilih pri/log untuk membuat bagian partition disk, lalu klik continue.
-![Screenshot](screenshot/28.png)
+![Screenshot](img/Debian/26.png)
 
 16. Pilih "create new partition disk" untuk membuat partition disk, lalu klik continue.
-![Screenshot](screenshot/29.png)
+![Screenshot](img/Debian/27.png)
 
 17. Tentukan jumlah penyimpanan partition disk pertama, lalu klik continue.
-![Screenshot](screenshot/30.png)
+![Screenshot](img/Debian/29.png)
 
 18. Pilih "primary" agar menjadikan penyimpanan utama, lalu klik continue.
-![Screenshot](screenshot/31.png)
+![Screenshot](img/Debian/30.png)
 
 19. Pilih "beginning", lalu klik continue.
-![Screenshot](screenshot/32.png)
+![Screenshot](img/Debian/31.png)
 
 20. pilih opsi "done setting up the partition" klik continue.
-![Screenshot](screenshot/33.png)
+![Screenshot](img/Debian/33.png)
 
 21. Setelah membuat partition disk pertama, silahkan membuat partition disk ke dua, tentukan isi penyimpanan yang ukurannya lebih kecil dibandingkan partition disk pertama, lalu klik continue.
-![Screenshot](screenshot/34.png)
+![Screenshot](img/Debian/34.png)
+![Screenshot](img/Debian/35.png)
+![Screenshot](img/Debian/37.png)
 
-22. Untuk partition disk kedua, pilih opsi logical dan pada mount point pilih Enter manually dan ketik "/storage", lalu klik continue.
-![Screenshot](screenshot/35.png)
 
-23. Setelah membuat partition disk kedua, silahkan membuat partition disk ke tiga, tentukan isi penyimpanan yang ukurannya lebih kecil dibandingkan partition disk kedua, lalu klik continue.
-![Screenshot](screenshot/36.png)
+23. Untuk partition disk kedua, pilih opsi primary dan pada mount point pilih Enter manually dan ketik "/storage", lalu klik continue.
+![Screenshot](img/Debian/41.png)
+![Screenshot](img/Debian/42.png)
+![Screenshot](img/Debian/43.png)
 
-24. Untuk partition disk kedua, pilih opsi logical, lalu jadikan "swap area" pada bagian "use as:", lalu klik continue.
-![Screenshot](screenshot/37.png)
+25. Setelah membuat partition disk kedua, silahkan membuat partition disk ke tiga, tentukan isi penyimpanan yang ukurannya lebih kecil dibandingkan partition disk kedua, lalu klik continue.
+![Screenshot](img/Debian/47.png)
 
-25. Cek ulang seperti gambar dibawah, jika sudah sesuai, klik continue.
-![Screenshot](screenshot/38.png)
+26. Untuk partition disk kedua, pilih opsi logical, lalu jadikan "swap area" pada bagian "use as:", lalu klik continue.
+![Screenshot](img/Debian/52.png)
 
-26. Pilih opsi "Yes", lalu klik continue.
-![Screenshot](screenshot/39.png)
+27. Cek ulang seperti gambar dibawah, jika sudah sesuai, klik continue.
+![Screenshot](img/Debian/54.png)
 
-27. Pilih opsi "no", lalu klik continue.
-![Screenshot](screenshot/40.png)
+28. Pilih opsi "No", lalu klik continue.
+![Screenshot](img/Debian/55.png)
 
-28. Pilih lokasi terdekat untuk mengunduh package manager, lalu klik continue.
-![Screenshot](screenshot/41.png)
 
-29. Pilih archive mirror, lalu klik continue.
-![Screenshot](screenshot/42.png)
+29. Pilih opsi "No", lalu klik continue.
+![Screenshot](img/Debian/59.png)
 
-30. Pada bagian ini tidak perlu diisi, klik continue
-![Screenshot](screenshot/43.png)
+30. Pilih lokasi terdekat untuk mengunduh package manager, lalu klik continue.
+![Screenshot](img/Debian/60.png)
 
-31. Pilih opsi "Yes", lalu klik continue.
-![Screenshot](screenshot/44.png)
+31. Pilih archive mirror, lalu klik continue.
+![Screenshot](img/Debian/61.png)
 
-32. Pilih opsi "/dev/sda", lalu klik continue.
-![Screenshot](screenshot/45.png)
+32. Pada bagian ini tidak perlu diisi, klik continue
+![Screenshot](img/Debian/62.png)
 
-33. Instalasi dan konfigurasi Debian telah selesai, klik continue dan Virtual machine akan me-reboot. 
-![Screenshot](screenshot/46.png)
+33. Pilih opsi "Yes", lalu klik continue.
+![Screenshot](img/Debian/63.png)
 
-34. Tampilan Linux Debian setelah reboot.
-![Screenshot](screenshot/47.png)
+35. Tidak perlu mengubah apa-apa, tekan continue.
+![Screenshot](img/Debian/64.png)
+
+36. Pilih opsi yes, lalu klik Continue
+![Screenshot](img/Debian/66.png)
+
+37. Pilih /dev/sda, lalu klik continue.
+![Screenshot](img/Debian/67.png)
+
+39. Instalasi dan konfigurasi Debian telah selesai, klik continue dan Virtual machine akan me-reboot. 
+![Screenshot](img/Debian/68.png)
+
+40. Tampilan Linux Debian setelah reboot.
+![Screenshot](img/Debian/69.png)
+![Screenshot](img/Debian/74.png)

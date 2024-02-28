@@ -48,26 +48,22 @@ Kemudian, sistem operasi akan mengambil alih kendali dan mulai menjalankan progr
 #### Bagaimana cara install Oracle Virtual Box dan Debian dalam Virtual Box ?
 
 ## Instalasi Oracle Virtual Box
-1. Masuk ke laman [Oracle Virtual box](https://www.virtualbox.org/wiki/Downloads), lalu unduh sesuai sistem operasi yang anda gunakan.
-![Screenshot](screenshot/1.png)
+1. Masuk ke laman [Oracle Virtual box](https://www.virtualbox.org/wiki/Downloads), lalu unduh sesuai sistem operasi yang anda gunakan. Disini saya sudah menambahkan file Oracle Virtualbox beserta file Debian yang nanti akan digunakan[Screenshot](img/Virtual/1.png)
 
-2. Masuk ke laman Download sistem operasi [Debian](https://www.debian.org/download) untuk mengunduh sistem operasi Linux Debian.
-![Screenshot](screenshot/2.png)
+2. Buka setup Oracle dan klik Next.
+![Screenshot](img/Virtual/2.png)
 
-3. Buka setup Oracle dan klik Next.
-![Screenshot](screenshot/3.png)
+3. Klik Install.
+[Screenshot](img/Virtual/3.png)
 
-4. Dalam menu tidak ada yang perlu diubah, klik Next.
-![Screenshot](screenshot/4.png)
+4. Oracle sedang dalam proses pengunduhan.
+[Screenshot](img/Virtual/4.png)
 
-5. Klik Yes.
-![Screenshot](screenshot/5.png)
+5. Oracle Virtual Box telah di install, klik finish.
+![Screenshot](img/Virtual/5.png)
 
-6. Klik Install.
-![Screenshot](screenshot/6.png)
-
-7. Oracle Virtual Box telah di install, klik finish.
-![Screenshot](screenshot/7.png)
+6.Tampilan awal akan terlihat seperti ini
+[Screenshot](img/Virtual/6.png)
 
 ## Instalasi Linux Debian dalam Oracle Virtual Box
 1. Buka Oracle Virtual Box, lalu klik opsi "New".

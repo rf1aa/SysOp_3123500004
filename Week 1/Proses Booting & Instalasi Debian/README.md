@@ -26,18 +26,22 @@ Apa itu Sistem Operasi?<br>
 ## Soal
 #### Sebutkan dan jelaskan proses booting !
 1 . <strong>Power ON</strong>
+![Screenshot](aset/img/1.jpg)
 Saat tombol power atau tombol reset dihidupkan, sumber daya listrik akan mengalir ke komputer.
 Kemudian, perangkat keras akan menerima daya untuk dinyalakan.
 
 2 . <strong>POST (Power On Selft Test)</strong>
+![Screenshot](aset/img/2.jpg)
 Setelah dinyalakan, komputer akan melakukan Power-On Self-Test atau POST, yang merupakan serangkaian tes perangkat keras untuk memastikan bahwa semuanya berfungsi dengan baik. 
 POST akan memeriksa RAM, prosesor, kartu grafis, dan perangkat keras lainnya. 
 
 3 . <strong>Inisialisasi perangkat keras</strong>
+![Screenshot](aset/img/3.jpg)
 Setelah POST selesai, komputer akan menginisialisasi perangkat keras seperti hard drive, keyboard, mouse, dan perangkat lainnya. 
 Proses ini melibatkan tahap mengenali perangkat keras, memuat driver yang diperlukan, dan menyiapkan perangkat untuk digunakan.
 
 4 . <strong>Membaca sektor boot</strong>
+![Screenshot](aset/img/4.jpg)
 Selanjutnya, komputer akan mencari sektor boot di hard drive atau perangkat penyimpanan lainnya. 
 Sektor boot adalah area khusus yang berisi instruksi awal untuk memuat sistem operasi.
 

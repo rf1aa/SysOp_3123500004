@@ -112,7 +112,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
    
    Hasil Output
 
-   ![App Screenshot](img/percobaan1_1.png)
+   ![App Screenshot](asset/img/1.png)
 
 2. Output ke layar (standar output), input dari keyboard (standard input)
    ```
@@ -126,7 +126,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan1_2.png)
+   ![App Screenshot](asset/img/2.png)
 
 3. Input nama direktori, output tidak ada (membuat direktori baru), bila terjadi error maka tampilan error pada layar (standard error)
    ```
@@ -136,7 +136,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan1_3.png)
+   ![App Screenshot](asset/img/3.png)
 
 ## Percobaan 2 : Pembelokan (redirection)
 1. Pembelokan standar output
@@ -147,7 +147,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan2_1.png)
+   ![App Screenshot](asset/img/4.png)
 
 2. Pembelokan standar input, yaitu input dibelokkan dari keyboard menjadi dari file
    ```
@@ -157,7 +157,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan2_2.png)
+   ![App Screenshot](asset/img/5.png)
 
 3. Pembelokan standar error untuk disimpan di file
    ```
@@ -168,7 +168,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan2_3.png)
+   ![App Screenshot](asset/img/6.png)
 
 4. Notasi 2>&1 : pembelokan standar error (2>) adalah identik dengan file descriptor 1.
    ```
@@ -181,7 +181,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan2_4.png)
+   ![App Screenshot](asset/img/7.png)
 
 5. Notasi 1>&2 (atau >&2) : pembelokan standar output adalah sama dengan file descriptor 2 yaitu standar error
    ```
@@ -191,7 +191,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
    ```
    Hasil Output
    
-   ![App Screenshot](img/percobaan2_5.png)
+   ![App Screenshot](asset/img/8.png)
 
 6. Notasi >> (append)
    ```
@@ -205,7 +205,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan2_6.png)
+   ![App Screenshot](asset/img/9.png)
 
 7. Notasi here document (<<++ .... ++) digunakan sebagai pembatas input dari keyboard. Perhatikan bahwa tanda pembatas dapat digantikan dengan tanda apa saja, namun harus sama dan tanda penutup harus diberikan pada awal baris
    ```
@@ -223,12 +223,15 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan2_7.png)
+   ![App Screenshot](asset/img/10.png)
 
 8. Notasi – (input keyboard) adalah representan input dari keyboard. Artinya menampilkan file 1, kemudian menampilkan input dari keyboard dan menampilkan file 2. Perhatikan bahwa notasi “-“ berarti menyelipkan input dari keyboard
   ```
   $ cat myfile.txt – surat
   ```
+  Hasil Output
+
+  ![Screenshot](asset/img/11.png)
 
 ## Percobaan 3 : Pipa (pipeline)
 
@@ -246,9 +249,9 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan3_1-1.png)
+   ![App Screenshot](asset/img/12png)
 
-   ![App Screenshot](img/percobaan3_1-2.png)
+   ![App Screenshot](asset/img/13.png)
 
 2. Untuk membelokkan standart output ke file, digunakan operator ">"
    ```
@@ -259,7 +262,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan3_2.png)
+   ![App Screenshot](asset/img/14.png)
 
 3. Untuk menambahkan output ke file digunakan operator ">>"
    ```
@@ -269,7 +272,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan3_3.png)
+   ![App Screenshot](asset/img/15.png)
 
 4. Untuk membelokkan standart input digunakan operator "<"
    ```
@@ -278,7 +281,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan3_4.png)
+   ![App Screenshot](asset/img/16.png)
 
 5. Pembelokan standart input dan standart output dapat dikombinasikan tetapi tidak boleh menggunakan nama file yang sama sebagai standart input dan output.
    ```
@@ -295,7 +298,8 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan3_5.png)
+   ![App Screenshot](asset/img/17.png)
+   ![App Screenshot](asset/img/18.png)
 
 ## Percobaan 4 : Filter
 1. Pipa juga digunakan untuk mengkombinasikan utilitas sistem untuk membentuk fungsi yang lebih kompleks
@@ -324,8 +328,17 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Hasil Output
    
-   ![App Screenshot](img/percobaan4_1.png)
+   ![App Screenshot](asset/img/19.png)
 
+   ![App Screenshot](asset/img/20.png)
+
+   ![App Screenshot](asset/img/21.png)
+
+   ![App Screenshot](asset/img/22.png)
+
+   ![App Screenshot](asset/img/23.png)
+
+   ![App Screenshot](asset/img/24.png)
 ## LATIHAN:
 
 1. Lihat daftar secara lengkap pada direktori aktif, belokkan tampilan standard output   ke file baru.

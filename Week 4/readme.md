@@ -555,3 +555,14 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 2. Kerjakan latihan diatas dan analisa hasilnya
 3. Berikan kesimpulan dari praktikum ini.
 
+Redirection mengacu pada teknik untuk mengalihkan aliran input dan output dari suatu program. Dengan redirection, Anda dapat mengalihkan output dari sebuah perintah agar disimpan dalam file atau menggunakan output tersebut sebagai masukan untuk perintah lainnya.<br>
+Pipeline adalah mekanisme yang memungkinkan output dari satu perintah (program) digunakan sebagai input untuk perintah lainnya secara langsung, tanpa perlu menyimpan output ke dalam file terlebih dahulu.<br
+Ada beberapa perintah yang digunakan dalam praktikum ini di antaranya <br>
+ - ``echo``  digunakan untuk mencetak atau menampilkan teks atau variabel ke terminal atau ke output standar.
+    - ``cat`` digunakan untuk mencantumkan, menggabungkan, dan menulis konten atau isi file dalam output standar
+    - ``more`` untuk Melihat isi suatu file dengan fasilitas melihat isi file dari atas dan untuk kebawah menggunakan tombol Enter untuk perbaris dan tombol Spasi untuk perlayar
+    - ``sort`` Digunakan untuk mengurutkan masukannya berdasarkan urutan nomor ASCII dari karakter.
+    - ``grep`` Digunakan untuk menyaring masukannya dan menampilkan baris-baris yang hanya mengandung pola yang ditentukan. Pola ini disebut regular expression.
+    - ``wc`` Digunakan untuk menghitung jumlah baris, kata dan karakter dari baris-baris masukan yang diberikan kepadanya.
+    - ``cut`` Digunakan untuk mengambil kolom tertentu dari baris-baris masukannya, yang ditentukan pada option –c.
+    - ``uniq`` Digunakan untuk menghilangkan baris-baris berurutan yang mengalami duplikasi, biasanya digabungkan dalam pipeline dengan ``sort``.

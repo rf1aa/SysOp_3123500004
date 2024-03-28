@@ -163,35 +163,35 @@ dan login ke terminal sebagai user
 
 2. Instruksi `ps`
 
-    ![App Screenshot](img/ps.png)
+    ![App Screenshot](img/Perc1_1.png)
 
     Analisa : 
     Instruksi `ps` digunakan untuk melihat kondisi proses yang ada 
 
 3. Instruksi `ps -u`
 
-    ![App Screenshot](img/ps-u.png)
+    ![App Screenshot](img/Perc1_2.png)
 
     Analisa : 
     Instruksi `ps -u` (user), digunakan untuk melihat elemen/faktor lain dari kondisi proses yang ada serta menampilkan nama user
 
 4. Instruksi `ps -u <user>`
 
-    ![App Screenshot](img/ps-u-user.png)
+    ![App Screenshot](img/Perc1_3.png)
 
     Analisa :
     Mencari proses yang spesifik pemakai. Proses diatas hanya terbatas pada proses milik pemakai. Perintah tersebut digunakan untuk menampilkan proses pada user yang kita inginkan.
 
 5. Instruksi `ps -a`
 
-    ![App Screenshot](img/ps-a.png)
+    ![App Screenshot](Perc1_4.png)
 
     Analisa :
     Perintah tersebut digunakan untuk menampilkan daftar dari semua proses yang sedang berjalan
 
 6. Instruksi `ps -au`
 
-    ![App Screenshot](img/ps-au.png)
+    ![App Screenshot](img/Perc1_5.png)
 
     Analisa :
     Perintah ps -au digunakan untuk menampilkan informasi yang lebih rinci tentang semua proses yang sedang berjalan, termasuk proses yang dimiliki oleh pengguna (termasuk proses terminal yang sedang dijalankan) dan proses sistem.
@@ -207,7 +207,7 @@ dan login ke terminal sebagai user
 
 2. Instruksi `ps -eH`
 
-    ![App Screenshot](img/ps-eH.png)
+    ![App Screenshot](img/Perc2_!.png)
 
     Analisa : 
     Perintah tersebut digunakan untuk menampilkan seluruh proses secara hierarki. Dimana opsi *e* digunakan untuk memilih semua proses dan opsi *H* untuk menghasilkan tampilan proses secara hierarki. 
@@ -221,7 +221,7 @@ dan login ke terminal sebagai user
 
 4. Instruksi `pstree`
 
-    ![App Screenshot](img/pstree.png)
+    ![App Screenshot](img/Perc2_3.png)
 
     Analisa : 
     Gambar diatas tampak seperti pohon atau diagram. Perintah tersebut berfungsi untuk menampilkan struktur proses yang berjalan di sistem secara hirarkis parent/child.
@@ -235,14 +235,14 @@ dan login ke terminal sebagai user
 
 6. Instruksi `pstree -p`
 
-    ![App Screenshot](img/pstree-p.png)
+    ![App Screenshot](img/Perc2_4.png)
 
     Analisa : 
     Perintah `pstree` -p dalam sistem operasi Linux adalah varian dari perintah pstree yang menampilkan struktur proses dalam bentuk pohon, namun dengan tambahan informasi tentang ID proses (PID) untuk setiap proses yang ditampilkan.
 
 7. Instruksi `pstree -h`
 
-    ![App Screenshot](img/pstree-h.png)
+    ![App Screenshot](img/Perc2_5.png)
 
     Analisa : 
     Dalam sistem Linux, perintah `pstree -h` digunakan untuk menampilkan struktur proses dalam bentuk pohon dengan opsi "human-readable" yang menyederhanakan ukuran angka yang besar ke format yang lebih mudah dipahami manusia.
@@ -254,35 +254,35 @@ dan login ke terminal sebagai user
 
 2. Instruksi `ps -e | more`
 
-    ![App Screenshot](img/ps-e-more.png)
+    ![App Screenshot](img/Perc3_!.png)
 
     Analisa : 
     Perintah `ps -e | more` berfungsi untuk menampilkan daftar semua proses yang sedang berjalan di sistem secara berurutan, dan outputnya akan ditampilkan secara bertahap menggunakan perintah `more`
 
 3. Instruksi `ps ax | more`
 
-    ![App Screenshot](img/ps-ax-more.png)
+    ![App Screenshot](img/Perc3_2.png)
 
     Analisa : 
     Opsi a akan menampilkan semua proses yang dihasilkan terminal (TTY). Opsi x menampilkan semua proses yang tidak dihasilkan terminal. Yang kemudian outputnya ditampilkan secara bertahap menggunakan perintah `more`
 
 4. Instruksi `ps ef | more`
 
-    ![App Screenshot](img/ps-ef-more.png)
+    ![App Screenshot](img/Perc3_3.png)
 
     Analisa : 
     Ketika perintah `ps – ef | more` dieksekusi maka opsi *-ef* akan menampilkan semua proses dalam format daftar penuh. Yang kemudian outputnya ditampilkan secara bertahap menggunakan perintah `more`
 
 5. Instruksi `ps -eo pid,cmd | more`
 
-    ![App Screenshot](img/ps-eo-pid-cmd-more.png)
+    ![App Screenshot](img/Perc3_4.png)
 
     Analisa : 
     Opsi `–eo` akan menampilkan semua proses dalam format sesuai definisi user yaitu terdiri dari kolom PID dan CMD. Yang kemudian outputnya akan ditampilkan secara bertahap menggunakan perintah `more`
 
 6. Instruksi `ps -eo pid,ppid,%mem,cmd | more`
 
-    ![App Screenshot](img/ps-eo-pid-ppid-cmd-more.png)
+    ![App Screenshot](img/Perc3_5.png)
 
     Analisa : 
     Perintah `ps -eo pid,ppid,%mem,cmd | more` akan menampilkan kolom PID, PPID dan %MEM. Dimana PPID adalah proses ID dari proses parent. %MEM menampilkan persentasi memory system yang digunakan proses. Jika proses hanya menggunakan sedikit memory system akan ditampilkan 0.
@@ -295,42 +295,40 @@ dan login ke terminal sebagai user
 
 2. Instruksi `yes`
 
-    ![App Screenshot](img/yes.png)
+    ![App Screenshot](img/Perc4_2.png)
 
     Analisa : 
     Perintah `yes` akan memberikan output huruf y yang tidak pernah berhenti. Untuk menghentikannya harus menggunakan *Ctrl + C*
 
 3. Instruksi `yes > /dev/null`
 
-    ![App Screenshot](img/yes-dev-null.png)
+    ![App Screenshot](img/Perc4_3.png)
 
     Analisa : 
     Membelokkan standard output dari perintah `yes` ke `/dev/null`. Untuk menghentikannya harus menggunakan *Ctrl + C*.
 
 4. Instruksi `yes > /dev/null &`
 
-    ![App Screenshot](img/yes-dev-null-2.png)
+    ![App Screenshot](img/Perc4_4.png)
 
     Analisa : 
     Salah satu cara agar perintah `yes` tetap dijalankan tetapi shell tetap digunakan untuk hal yang lain dengan meletakkan proses pada background dengan menambahkan karakter `&` pada akhir perintah. `[1]` merupakan job number PID.
 
 5. Instruksi `jobs`
 
-    ![App Screenshot](img/jobs-running.png)
+    ![App Screenshot](img/Perc4_5.png)
 
     Analisa : 
     Perintah di atas digunakan untuk melihat status proses yang telah digunakan.
 
 6. Instruksi `kill %<nomor jobs>`
 
-    ![App Screenshot](img/kill.png)
-
     Analisa : 
     Perintah `kill` digunakan untuk menghentikan job diikuti oleh *job number* atau PID Proses. Untuk identifikasi job number, penulisan perintah diikuti prefix dengan karakter `%`.
 
 7. Instruksi `jobs`
 
-    ![App Screenshot](img/jobs-terminated.png)
+    ![App Screenshot](img/Perc4_6.png)
 
     Analisa : 
     Ini adalah tahap terakhir, yaitu menggunakan perintah `jobs` untuk melihat status job setelah diterminasi.

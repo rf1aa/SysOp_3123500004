@@ -339,3 +339,73 @@ int main() {
 Analisa:
 Program diatas adalah program implementasi dari fork() didalam bahasa C++ dimana ada 2 proses yang memiliki hubungan parent dan child. proses pertama memiliki PID: 3038 dan PPID yang tidak diketahui yang merupakan proses utama (main program atau parent). Setelah program menjalankan fungsi fork() maka akan tercipta proses baru yaitu child dengan PID: 3039 dan PPID: 3038 (PID dari proses utama (parent)). Setelah parent program memberikan output yang menyebutkan nomor PID nya dan nomor PID dari child, parent program akan melakukan tahap menunggu (wait) untuk menunggu child program berjalan. Child program akan berjalan dan memberikan output nomor PID nya dan nomor PPID nya dan menjalankan program `execl(fork3)`, panggilan sistem `execl()` digunakan untuk menjalankan sebuah program di dalam proses yang sudah ada, pada program yang ini sistem `execl()` menjalankan program fork3 pada file fork3.cpp. Setelah output dari program child diberikan, program child akan langsung exit the process. Setelah child program exit the process maka parent program akan mengikuti untuk exit the process juga. Dan ini adalah end of program.
 
+.
+
+### 8. Tugas Perkalian Matriks
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+#define ROWS 4
+#define COLS 4
+
+void printMatrix(int matrix[ROWS][COLS]) {
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int matrix[ROWS][COLS];
+    int skalar = 2;
+
+    for (int i = 0; i < ROWS; i++) {
+        for (int j = 0; j < COLS; j++) {
+            matrix[i][j] = i * j;
+        }
+    }
+
+    printf("Matriks Awal:\n");
+    printMatrix(matrix);
+
+    pid_t pid = fork();
+
+    if (pid == 0) {
+        printf("\nProses Anak - Matriks Hasil:\n");
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j < COLS; j++) {
+                matrix[i][j] *= skalar;
+                printf("%d ", matrix[i][j]);
+            }
+            printf("\n");
+        }
+    } else if (pid > 0) {
+        wait(NULL);
+        printf("\nProses Induk Selesai.\n");
+    } else {
+        fprintf(stderr, "Fork gagal.\n");
+        return 1;
+    }
+
+    return 0;
+}
+```
+
+Output
+
+![App Screenshot](img/matriks.png)
+
+Analisa:
+Kode di atas adalah program perkalian dua matriks [4 x 4] dalam bahasa C yang menggunakan fork().
+
+Proses Fork: Setelah matriks diinisialisasi, program melakukan fork untuk menciptakan proses child. Proses child akan mengalikan setiap elemen matriks dengan skalar, sementara proses parent menunggu proses child selesai.
+
+Pemrosesan Serial: Meskipun perkalian skalar dilakukan secara paralel oleh proses child, program menunggu proses child selesai sebelum melanjutkan eksekusi. Ini dilakukan dengan menggunakan fungsi wait(), sehingga proses parent akan menunggu sampai proses child selesai sebelum mencetak pesan bahwa proses parent telah selesai.
+
+Kesimpulannya, program ini memberikan contoh yang baik tentang penggunaan fork dalam bahasa pemrograman C untuk melakukan operasi secara paralel. Dengan memahami konsep fork dan multitasking, programmer dapat membuat aplikasi yang lebih efisien dan responsif.

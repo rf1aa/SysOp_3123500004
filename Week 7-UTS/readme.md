@@ -88,7 +88,7 @@ int main() {
 
 Output: 
 
-![App Screenshot](img/konsep-output.png)
+![App Screenshot](img/1.png)
 
 
 ### 2. `fork01.c`
@@ -99,7 +99,7 @@ Kode Program:
 
 Output Program: 
 
-![App Screenshot](img/fork01.png)
+![App Screenshot](img/fork1.png)
 
 Visualisasi:
 
@@ -107,17 +107,17 @@ Visualisasi:
 int main() { 
     for(int i = 0; i < 3; i++) {
 
-                    pid: 3362, ppid: 2236, uid: 1000
+                    pid: 3056, ppid: 3027, uid: 1000
                             [Main Process]
                                     |
                                  sleep(3)
                                     |
-                    pid: 3362, ppid: 2236, uid: 1000
+                    pid: 3056, ppid: 3027, uid: 1000
                             [Main Process]
                                     |
                                  sleep(3)
                                     |
-                    pid: 3362, ppid: 2236, uid: 1000
+                    pid: 3056, ppid: 3027, uid: 1000
                             [Main Process]
                                     |
                                  sleep(3)
@@ -138,7 +138,7 @@ Kode Program:
 
 Output Program: 
 
-![App Screenshot](img/fork02.png)
+![App Screenshot](img/3.png)
 
 Visualisasi:
 
@@ -148,7 +148,7 @@ int main() {
                                  +
                                /   \
     while(1) {                /     \
-               pid: 3363, ppid: -    pid: 3364, ppid: 3363
+               pid: 2824, ppid: -    pid: 2825, ppid: 2824
             [Parent Process] x = 5    [Child Process] x = 5
                               \     /
                                \   /
@@ -175,7 +175,7 @@ Kode Program:
 
 Output Program: 
 
-![App Screenshot](img/fork03.png)
+![App Screenshot](img/4.png)
 
 Visualisasi:
 
@@ -185,7 +185,7 @@ int main() {
                                  +
                                /   \
     loop 0 to 5 {             /     \
-               pid: 3366, ppid: -    pid: 3367, ppid: 3366
+               pid: 3103, ppid: -    pid: 3104, ppid: 3103
                [Parent Process]     [Child Process]
                               \     /
                                \   /
@@ -208,13 +208,13 @@ Ada loop yang diulang 5 kali. Di dalam loop, program memanggil getpid() untuk me
 
 Ketika program dijalankan, ia menciptakan proses child menggunakan fork(). Proses parent dan child terus mengeksekusi kode setelah fork(). Karena kedua proses memiliki kode yang sama, keduanya mencetak pesan "this is process" diikuti dengan ID prosesnya.
 
-ID proses parent adalah 3366 dan ID proses child adalah 3367. Outputnya adalah:
+ID proses parent adalah 3103 dan ID proses child adalah 3104. Outputnya adalah:
 
-this is process 3366
-this is process 3367
+this is process 3103
+this is process 3104
 
-this is process 3366 // Proses child terus mengeksekusi perulangan
-this is process 3367 // Proses parent terus mengeksekusi perulangan
+this is process 3103 // Proses child terus mengeksekusi perulangan
+this is process 3104 // Proses parent terus mengeksekusi perulangan
 
 ### 5. `fork04.c`
 
@@ -225,7 +225,7 @@ Kode Program:
 
 Output Program: 
 
-![App Screenshot](img/fork04.png)
+![App Screenshot](img/6.png)
 
 Visualisasi:
 
@@ -235,11 +235,11 @@ int main() {
                                  +
                                /   \
                               /     \
-               pid: 2991, ppid: -    \
+               pid: 3004, ppid: -    \
                 [Parent Process]      \  
                         |              \
                         |               \
-                       wait          pid: 2992, ppid: 2991
+                       wait          pid: 3005, ppid: 3004
                            \             [Child Process]
                             \         /
                              \       /
@@ -253,7 +253,7 @@ int main() {
 ```
 
 Analisa: 
-Program diatas adalah program implementasi dari fork() didalam bahasa C++ dimana ada 2 proses yang memiliki hubungan parent dan child. proses pertama memiliki PID: 2991 dan PPID yang tidak diketahui yang merupakan proses utama (main program atau parent). Setelah program menjalankan fungsi fork() maka akan tercipta proses baru yaitu child dengan PID: 2992 dan PPID: 2991 (PID dari proses utama (parent)). Setelah parent program memberikan output yang menyebutkan nomor PID nya dan nomor PID dari child, parent program akan melakukan tahap menunggu (wait) untuk menunggu child program berjalan. Child program berjalan dan memberikan output nomor PID nya dan nomor PPID nya, lalu akan langsung exit the process. Setelah child program exit the process maka parent program akan mengikuti untuk exit the process juga. Dan ini adalah end of program.
+Program diatas adalah program implementasi dari fork() didalam bahasa C++ dimana ada 2 proses yang memiliki hubungan parent dan child. proses pertama memiliki PID: 3004 dan PPID yang tidak diketahui yang merupakan proses utama (main program atau parent). Setelah program menjalankan fungsi fork() maka akan tercipta proses baru yaitu child dengan PID: 3005 dan PPID: 3004 (PID dari proses utama (parent)). Setelah parent program memberikan output yang menyebutkan nomor PID nya dan nomor PID dari child, parent program akan melakukan tahap menunggu (wait) untuk menunggu child program berjalan. Child program berjalan dan memberikan output nomor PID nya dan nomor PPID nya, lalu akan langsung exit the process. Setelah child program exit the process maka parent program akan mengikuti untuk exit the process juga. Dan ini adalah end of program.
 
 
 ### 6. `fork05.c`
@@ -265,7 +265,7 @@ Kode Program:
 
 Output Program: 
 
-![App Screenshot](img/fork05.png)
+![App Screenshot](img/7.png)
 
 Visualisasi:
 
@@ -275,12 +275,12 @@ int main() {
                                  +
                                /   \
                               /     \
-               pid: 3076, ppid: -    \
+               pid: 3017, ppid: -    \
                 [Parent Process]      \  
                         |              \
                         |               \
-                        |          pid: 3077, ppid: 3076
-                       wait           total 20
+                        |          pid: 3018, ppid: 3017
+                       wait           total 4
                           \           execl(/bin/ls) 
                            \         [Child Process]
                             \         /
@@ -295,7 +295,7 @@ int main() {
 ```
 
 Analisa:
-Program diatas adalah program implementasi dari fork() didalam bahasa C++ dimana ada 2 proses yang memiliki hubungan parent dan child. proses pertama memiliki PID: 3076 dan PPID yang tidak diketahui yang merupakan proses utama (main program atau parent). Setelah program menjalankan fungsi fork() maka akan tercipta proses baru yaitu child dengan PID: 3077 dan PPID: 3076 (PID dari proses utama (parent)). Setelah parent program memberikan output yang menyebutkan nomor PID nya dan nomor PID dari child, parent program akan melakukan tahap menunggu (wait) untuk menunggu child program berjalan. Child program akan berjalan dan memberikan output nomor PID nya dan nomor PPID nya dan menjalankan program `execl("/bin/ls", "ls", "-l", "/home", NULL)`, `total 20` disini adalah jika proses child berhasil menjalankan sistem panggilan `execl()`, maka hasil dari perintah `ls -l /home` akan dicetak, serta setiap proses mencetak pesan sebelum mengakhiri eksekusi. Jadi, total output yang dihasilkan adalah 20. Setelah output dari program child diberikan, program child akan langsung exit the process. Setelah child program exit the process maka parent program akan mengikuti untuk exit the process juga. Dan ini adalah end of program.
+Program diatas adalah program implementasi dari fork() didalam bahasa C++ dimana ada 2 proses yang memiliki hubungan parent dan child. proses pertama memiliki PID: 3017 dan PPID yang tidak diketahui yang merupakan proses utama (main program atau parent). Setelah program menjalankan fungsi fork() maka akan tercipta proses baru yaitu child dengan PID: 3018 dan PPID: 3017 (PID dari proses utama (parent)). Setelah parent program memberikan output yang menyebutkan nomor PID nya dan nomor PID dari child, parent program akan melakukan tahap menunggu (wait) untuk menunggu child program berjalan. Child program akan berjalan dan memberikan output nomor PID nya dan nomor PPID nya dan menjalankan program `execl("/bin/ls", "ls", "-l", "/home", NULL)`, `total 20` disini adalah jika proses child berhasil menjalankan sistem panggilan `execl()`, maka hasil dari perintah `ls -l /home` akan dicetak, serta setiap proses mencetak pesan sebelum mengakhiri eksekusi. Jadi, total output yang dihasilkan adalah 4. Setelah output dari program child diberikan, program child akan langsung exit the process. Setelah child program exit the process maka parent program akan mengikuti untuk exit the process juga. Dan ini adalah end of program.
 
 
 ### 7. `fork06.c`
@@ -307,7 +307,7 @@ Kode Program:
 
 Output Program: 
 
-![App Screenshot](img/fork06.png)
+![App Screenshot](img/8.png)
 
 Visualisasi:
 
@@ -317,11 +317,11 @@ int main() {
                                  +
                                /   \
                               /     \
-               pid: 3517, ppid: -    \
+               pid: 3038, ppid: -    \
                 [Parent Process]      \  
                         |              \
                         |               \
-                        |          pid: 3518, ppid: 3517
+                        |          pid: 3039, ppid: 3038
                        wait           execl(fork3) 
                           \           [Child Process]
                            \           /
@@ -337,5 +337,5 @@ int main() {
 ```
 
 Analisa:
-Program diatas adalah program implementasi dari fork() didalam bahasa C++ dimana ada 2 proses yang memiliki hubungan parent dan child. proses pertama memiliki PID: 3076 dan PPID yang tidak diketahui yang merupakan proses utama (main program atau parent). Setelah program menjalankan fungsi fork() maka akan tercipta proses baru yaitu child dengan PID: 3077 dan PPID: 3076 (PID dari proses utama (parent)). Setelah parent program memberikan output yang menyebutkan nomor PID nya dan nomor PID dari child, parent program akan melakukan tahap menunggu (wait) untuk menunggu child program berjalan. Child program akan berjalan dan memberikan output nomor PID nya dan nomor PPID nya dan menjalankan program `execl(fork3)`, panggilan sistem `execl()` digunakan untuk menjalankan sebuah program di dalam proses yang sudah ada, pada program yang ini sistem `execl()` menjalankan program fork3 pada file fork3.cpp. Setelah output dari program child diberikan, program child akan langsung exit the process. Setelah child program exit the process maka parent program akan mengikuti untuk exit the process juga. Dan ini adalah end of program.
+Program diatas adalah program implementasi dari fork() didalam bahasa C++ dimana ada 2 proses yang memiliki hubungan parent dan child. proses pertama memiliki PID: 3038 dan PPID yang tidak diketahui yang merupakan proses utama (main program atau parent). Setelah program menjalankan fungsi fork() maka akan tercipta proses baru yaitu child dengan PID: 3039 dan PPID: 3038 (PID dari proses utama (parent)). Setelah parent program memberikan output yang menyebutkan nomor PID nya dan nomor PID dari child, parent program akan melakukan tahap menunggu (wait) untuk menunggu child program berjalan. Child program akan berjalan dan memberikan output nomor PID nya dan nomor PPID nya dan menjalankan program `execl(fork3)`, panggilan sistem `execl()` digunakan untuk menjalankan sebuah program di dalam proses yang sudah ada, pada program yang ini sistem `execl()` menjalankan program fork3 pada file fork3.cpp. Setelah output dari program child diberikan, program child akan langsung exit the process. Setelah child program exit the process maka parent program akan mengikuti untuk exit the process juga. Dan ini adalah end of program.
 

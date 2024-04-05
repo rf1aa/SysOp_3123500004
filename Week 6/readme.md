@@ -22,35 +22,35 @@
 
 1. Instruksi `yes > /dev/null`
 
-    ![App Screenshot](img/pcb5/yes-dev-null-z.png)
+    ![App Screenshot](img/pcb5/1.png)
 
     Analisa : 
     Cara lain meletakkan job pada background dengan memulai job secara normal (pada foreground), stop job dan memulai lagi pada background. Gunakan perintah `yes > /dev/null` untuk memulai job baru. Hentikan sementara job (suspend), bukan menghentikannya (terminate), tetapi menghentikan sementara job sampai di restart. Untuk menghentikan sementara job gunakan *Ctrl + Z*
 
 2. Instruksi `fg`
 
-    ![App Screenshot](img/pcb5/fg.png)
+    ![App Screenshot](img/pcb5/2.png)
 
     Analisa : 
     Perintah `fg` disini digunakan untuk me-restart job pada *foreground*.
 
 3. Instruksi `bg`
 
-    ![App Screenshot](img/pcb5/bg.png)
+    ![App Screenshot](img/pcb5/3.png)
 
     Analisa : 
     Setelah instruksi `fg`, Shell akan menampilkan nama perintah yang diletakkan di *foreground*. Stop job lagi dengan *Ctrl + Z*. Kemudian gunakan perintah `bg` untuk meletakkan job pada *background*. 
      
     Instruksi `fg`
 
-    ![App Screenshot](img/pcb5/fg-2.png)
+    ![App Screenshot](img/pcb5/4.png)
 
     Analisa : 
     Job tidak bisa dihentikan dengan *Ctrl + Z* karena job berada pada *background*. Untuk menghentikannya, letakkan job pada *foreground* dengan `fg` dan kemudian hentikan sementara dengan *Ctrl + Z*.
 
 4. Instruksi `yes &`
 
-    ![App Screenshot](img/pcb5/yes-&.png)
+    ![App Screenshot](img/pcb5/5.png)
 
     Analisa : 
     Job pada *background* dapat digunakan untuk menampilkan teks pada terminal, dimana dapat diabaikan jika mencoba mengerjakan job lain seperti perintah di atas. Untuk menghentikannya tidak dapat menggunakan *Ctrl + C*. Job harus dipindah ke *foreground* baru diberhentikan dengan cara tekan `fg` dan tekan enter, Kemudian lanjutkan dengan *Ctrl + Z* untuk menghentikan sementara
@@ -71,11 +71,11 @@
 
 7. Instruksi `ps -fae`
 
-    ![App Screenshot](img/pcb5/ps-fae.png)
+    ![App Screenshot](img/pcb5/6.png)
 
-    ![App Screenshot](img/pcb5/kill-9-PID.png)
+    ![App Screenshot](img/pcb5/9.png)
 
-    ![App Screenshot](img/pcb5/killed-9-PID.png)
+    ![App Screenshot](img/pcb5/8.png)
 
     Analisa : 
     Lihat job dengan perintah `ps -fae` dan tekan Enter. Kemudian hentikan proses dengan perintah kill. Pada proses di atas proses yang dihentikan adalah proses dengan PID 6142, yaitu proses `yes > /dev/null`
@@ -88,71 +88,70 @@
 
 2. Buka 3 terminal, tampilkan pada screen yang sama. 
 
-    ![App Screenshot](img/pcb6/login-root.png)
+    ![App Screenshot](img/pcb6/l.png)
 
 3. Pada setiap terminal, ketik `PS1 = ” \w:”` diikuti Enter. `\w` menampilkan path pada direktori home.
 
-    ![App Screenshot](img/pcb6/ps1-w.png)
+    ![App Screenshot](img/pcb6/2.png)
 
 4. Karena login sebagai root, maka akan ditampilkan `~:` pada setiap terminal. Untuk setiap terminal ketik `pwd` dan tekan *Enter* untuk melihat bahwa Anda sedang berada pada direktori `/root`.
 
-    ![App Screenshot](img/pcb6/pwd.png)
+    ![App Screenshot](img/pcb6/3.png)
 
 5. Buka terminal lagi (keempat), atur posisi sehingga keempat terminal terlihat pada screen
 
-    ![App Screenshot](img/pcb6/4-terminal.png)
-
 6. Pada terminal keempat, ketik `top` dan tekan *Enter*. Maka program `top` akan muncul. Ketik `i`. Top akan menampilkan proses yang aktif. Ketik `lmt`. `Top` tidak lagi menampilkan informasi pada bagian atas dari screen. Pada percobaan ini, terminal ke empat sebagai jendela `Top`.
 
-    ![App Screenshot](img/pcb6/top.png)
+    ![App Screenshot](img/pcb6/4.png)
 
-    ![App Screenshot](img/pcb6/top-i.png)
+    ![App Screenshot](img/pcb6/5.png)
 
-    ![App Screenshot](img/pcb6/top-lmt.png)
+    ![App Screenshot](img/pcb6/6.png)
 
 7. Pada terminal 1, bukalah program executable C++ dengan mengetik program `yes` dan tekan *Enter*.
 
-    ![App Screenshot](img/pcb6/terminal-1-yes.png)
+    ![App Screenshot](img/pcb6/7.png)
 
 8. Ulangi langkah 7 untuk terminal 2
 
-    ![App Screenshot](img/pcb6/terminal-2-yes.png)  
+    ![App Screenshot](img/pcb6/8.png)  
 
-9. Jendela Top akan menampilkan dua program `yes` sebagai proses yang berjalan. Nilai `%CPU` sama pada keduanya. Hal ini berarti kedua proses mengkonsumsi waktu proses yang sama dan berjalan sama cepat. *PID* dari kedua proses akan berbeda, misalnya pada contoh di bawah adalah 2835 dan 2837. Kemudian gunakan terminal 3 (yang tidak menjalankan primes maupun Jendela Top) dan ketik *renice 19 2835* dan diikuti Enter. Hal ini berarti mengganti penjadwalan prioritas dari proses ke 19.
+9. Jendela Top akan menampilkan dua program `yes` sebagai proses yang berjalan. Nilai `%CPU` sama pada keduanya. Hal ini berarti kedua proses mengkonsumsi waktu proses yang sama dan berjalan sama cepat. *PID* dari kedua proses akan berbeda, misalnya pada contoh di bawah adalah 2825 dan 2827. Kemudian gunakan terminal 3 (yang tidak menjalankan primes maupun Jendela Top) dan ketik *renice 19 2825* dan diikuti Enter. Hal ini berarti mengganti penjadwalan prioritas dari proses ke 19.
 
-    ![App Screenshot](img/pcb6/terminal-4-2yes.png)  
+    ![App Screenshot](img/pcb6/9.png)  
 
-    ![App Screenshot](img/pcb6/terminal-3-renice.png)  
+    ![App Screenshot](img/pcb6/10.png)  
 
-10. Tunggu beberapa saat sampai program top berubah dan terlihat pada jendela `Top`. Pada kolom `STAT` memperlihatkan `N` untuk proses 2835. Hal ini berarti bahwa penjadwalan prioritas untuk proses 2835 lebih besar (lebih lambat) dari 0. Proses 2837 berjalan lebih cepat.
+10. Tunggu beberapa saat sampai program top berubah dan terlihat pada jendela `Top`. Pada kolom `STAT` memperlihatkan `N` untuk proses 2825. Hal ini berarti bahwa penjadwalan prioritas untuk proses 2835 lebih besar (lebih lambat) dari 0. Proses 2827 berjalan lebih cepat.
 
-    ![App Screenshot](img/pcb6/terminal-4-after-renice.png)  
+    ![App Screenshot](img/pcb6/11.png)  
 
-11. Program *top* juga mempunyai fungsi yang sama dengan program `renice`. Pilih Jendela *Top* dan tekan `r`. Program top terdapat prompt PID to renice: tekan 2835 dan tekan Enter. Program top memberikan prompt Renice PID 3148 to value: tekan -19 dan tekan Enter.
+11. Program *top* juga mempunyai fungsi yang sama dengan program `renice`. Pilih Jendela *Top* dan tekan `r`. Program top terdapat prompt PID to renice: tekan 2825 dan tekan Enter. Program top memberikan prompt Renice PID 2825 to value: tekan -19 dan tekan Enter.
 
-    ![App Screenshot](img/pcb6/terminal-4-r.png)  
+    ![App Screenshot](img/pcb6/12.png)  
 
-    ![App Screenshot](img/pcb6/terminal-4-19.png)  
+    ![App Screenshot](img/pcb6/13.png)  
 
-12. Tunggu beberapa saat sampai top berubah dan lihat nilai %CPU pada kedua proses. Sekarang proses 2835 lebih cepat dari proses 2837. Kolom status menunjukkan < pada proses 3148 yang menunjukkan penjadwalan prioritas lebih rendah (lebih cepat) dari nilai 0
+12. Tunggu beberapa saat sampai top berubah dan lihat nilai %CPU pada kedua proses. Sekarang proses 2825 lebih cepat dari proses 2827. Kolom status menunjukkan < pada proses 2825 yang menunjukkan penjadwalan prioritas lebih rendah (lebih cepat) dari nilai 0
 
-    ![App Screenshot](img/pcb6/terminal-4-19-after.png)  
+    ![App Screenshot](img/pcb6/14.png)  
 
-13. Pilih terminal 3 (yang sedang tidak menjalankan yes atau program top) dan ketik nice –n -10 yes dan tekan Enter. Tunggu beberapa saat agar program top berubah dan akan terlihat proses primes ketiga. Misalnya PID nya 2845. Opsi -10 berada pada kolom NI (penjadwalan prioritas).
+13. Pilih terminal 3 (yang sedang tidak menjalankan yes atau program top) dan ketik nice –n -10 yes dan tekan Enter. Tunggu beberapa saat agar program top berubah dan akan terlihat proses primes ketiga. Misalnya PID nya 2835. Opsi -10 berada pada kolom NI (penjadwalan prioritas).
 
-    ![App Screenshot](img/pcb6/terminal-3-nice-10-yes.png)  
+
+    ![App Screenshot](img/pcb6/15.png)  
+    ![App Screenshot](img/pcb6/16.png)  
 
 14. Jangan menggunakan mouse dan keyboard selama 10 detik. Program top menampilkan proses yang aktif selain program yes. Maka akan terlihat proses top terdaftar tetapi %CPU kecil (dibawah 1.0) dan konsisten. Juga terlihat proses berhubungan dengan dekstop grafis seperti X, panel dll.
 
-    ![App Screenshot](img/pcb6/terminal-4-proses-top.png)  
+    ![App Screenshot](img/pcb6/17.png)  
 
-15. Pindahkan mouse sehingga kursor berubah pada screen dan lihat apa yang terjadi dengan tampilan top. Proses tambahan akan muncul dan nilai %CPU berubah sebagai bagian grafis yang bekerja. Satu alasan adalah bahwa proses 2834 berjalan pada penjadwalan prioritas tinggi. Pilih jendela Top, ketik `r`. `PID to renice :` muncul prompt. Ketik 2834 dan tekan Enter. `Renice PID 2834 to value:` muncul prompt. Ketik 0 dan tekan Enter. Sekarang pindahkan mouse ke sekeliling screen. Lihat perubahannya
+15. Pindahkan mouse sehingga kursor berubah pada screen dan lihat apa yang terjadi dengan tampilan top. Proses tambahan akan muncul dan nilai %CPU berubah sebagai bagian grafis yang bekerja. Satu alasan adalah bahwa proses 2822 berjalan pada penjadwalan prioritas tinggi. Pilih jendela Top, ketik `r`. `PID to renice :` muncul prompt. Ketik 2822 dan tekan Enter. `Renice PID 2822 to value:` muncul prompt. Ketik 0 dan tekan Enter. Sekarang pindahkan mouse ke sekeliling screen. Lihat perubahannya
 
-    ![App Screenshot](img/pcb6/terminal-4-top-r.png)  
+    ![App Screenshot](img/pcb6/18.png)  
 
-    ![App Screenshot](img/pcb6/terminal-4-top-r-0.png)  
+    ![App Screenshot](img/pcb6/19.png)  
 
-    ![App Screenshot](img/pcb6/terminal-4-last.png)  
 
 16. Tutup semua terminal window.
 
@@ -162,17 +161,17 @@
 
 1. Masuk ke tty2 dengan *Ctrl+Alt+F2*. Ketik `ps –au` dan tekan Enter. Kemudian perhatikan keluaran sebagai berikut :
 
-    ![App Screenshot](img/latihan/ps-au.png)
+    ![App Screenshot](img/latihan/ttv3.png)
 
     - Sebutkan nama-nama proses yang bukan root
         - Semua proses kecuali `/bin/login -p--` adalah bukan root 
 
     - Tulis PID dan COMMAND dari proses yang paling banyak menggunakan CPU time
-        - PID : 2653
+        - PID : 3061
         - COMMAND : -bash
 
     - Sebutkan buyut proses dan PID dari proses tersebut
-        - `/usr/libexec/gdm-wayland-session` dengan PID 1166
+        - `/usr/libexec/gdm-wayland-session` dengan PID 1145
 
     - Sebutkan beberapa proses daemon
         - Pada beberapa proses yang tampil pada gambar di atas, tidak ada proses daemon.
@@ -185,7 +184,7 @@
         `$ sh`
         `$ ps`
 
-        ![App Screenshot](img/latihan/1-e-prompt.png)
+        ![App Screenshot](img/latihan/1.png)
 
         perintah `$ csh` adalah sebuah shell interaktif yang menawarkan lebih banyak sintaks dibandingkan dengan Bourne Shell. 
         perintah `$ bash` digunakan untuk mengkonversi instruksi yang dimasukkan ke dalam bahasa biner yang dapat dimengerti oleh kernel Linux. 
@@ -196,61 +195,60 @@
 
     - Sebutkan PID yang paling besar dan kemudian buat urut-urutan proses sampai ke PPID = 1.
 
-        ![App Screenshot](img/latihan/1-f.png)
+        ![App Screenshot](img/latihan/2.png)
 
-        1) PID = 2682 -> ps
-        2) PID = 2681 -> sh
-        3) PID = 2678 -> bash
-        4) PID = 2676 -> csh
-        5) PID = 2583 -> bash
-        6) PID = 2064 -> bash
+        1) PID = 3147 -> ps
+        2) PID = 3146 -> sh
+        3) PID = 3143 -> bash
+        4) PID = 3138 -> csh
+        5) PID = 2977 -> bash
 
 2. Cobalah format tampilan ps dengan opsi berikut dan perhatikan hasil tampilannya :
     - `-f` daftar penuh
 
-        ![App Screenshot](img/latihan/ps-f.png)  
+        ![App Screenshot](img/latihan/3.png)  
 
         Analisa: 
         Opsi `-f` digunakan untuk menampilkan output informasi proses secara lengkap atau penuh. Infromasi tersebut mencakup UID (Username)/pengguna yang menjalankan proses, PID (Process ID), PPID (Process Parent ID), C (Informasi penjadwalan), STIME (Start Time), TTY, TIME, CMD (command).
 
     - `-j` format job
 
-        ![App Screenshot](img/latihan/ps-j.png)  
+        ![App Screenshot](img/latihan/4.png)  
 
         Analisa:
         Dilihat dari hasil percobaan perintah `$ ps -j`, hasilnya menampilkan output informasi proses sistem dalam bentuk format job, informasi tersebut mencakup PID (Process ID), PGID (Process Group Leader), SID (Session Identifier/ Session Group), TTY, TIME, CMD (Command).
 
     - `j` format job control
 
-        ![App Screenshot](img/latihan/ps_j.png)  
+        ![App Screenshot](img/latihan/5.png)  
 
         Analisa:
          Dari hasil percobaan perintah `$ ps j` di atas, hasilnya menampilkan proses sistem dalam bentuk BSD format job, yang mencakup informasi tentang PPID, PID, PGID, SID, TTY, TPGID (Task_Traced), STAT, UID, TIME, COMMAND.
 
     - `l` daftar memanjang
 
-        ![App Screenshot](img/latihan/ps_l.png) 
+        ![App Screenshot](img/latihan/6.png) 
 
         Analisa:
         Dari hasil percobaan perintah `$ ps l` di atas, hasilnya menampilkan proses sistem dalam bentuk daftar memanjang (long format) dan menggambarkan gambaran yang lebih rinci tentang proses yang sedang berjalan di sistem linux. Hasilnya mencakup informasi yang berisi F (Flags), UID, PID, PPID, PRI (Priority of the process), NI (Nice value), VSZ (Virtual memory usage), RSS (Real memory usage), WCHAN(Memory address of the event the process is waiting for), STAT (Process status code), TTY, TIME, COMMAND. 
 
     - `s` format sinyal
 
-        ![App Screenshot](img/latihan/ps_s.png)
+        ![App Screenshot](img/latihan/7.png)
 
         Analisa:
         Dilihat dari hasil percobaan perintah `$ ps s`, hasilnya menampilkan proses sistem dalam bentuk format sinyal. Opsi ini dapat digunakan untuk menampilkan informasi tentang sinyal yang dikirimkan kepada proses. Informasi yang diberikan oleh perintah ini mencakup tentang UID, PID, PENDING, BLOCKED, IGNORED, CAUGHT, STAT, TTY, TIME, COMMAND.
 
     - `v` format virtual memory
 
-        ![App Screenshot](img/latihan/ps_v.png)
+        ![App Screenshot](img/latihan/8.png)
 
         Analisa: 
         Dilihat dari hasil percobaan perintah `$ ps v`. Dengan menggunakan perintah `ps v` kita dapat mendapatkan informasi tentang penggunaan memori virtual dan fisik oleh proses, status proses, dan lain-lain. Hasilnya mencakup tampilan proses sistem dalam bentuk virtual memory, hasilnya berisi PID, TTY, STAT, TIME, MAJFL (Number of major faults the system), TRS (Shows the text resident size), DRS (Shows the disk resident size), RSS (Shows the resident set size), %MEM, COMMAND.
 
     - `X` format register i386
 
-        ![App Screenshot](img/latihan/ps_X.png)
+        ![App Screenshot](img/latihan/10.png)
 
         Analisa:
         Dilihat dari hasil percobaan perintah `$ ps X`, hasilnya menampilkan proses sistem dalam bentuk format register i368, hasilnya berisi PID, STACKP, ESP (Extended Stack Pointer), EIP, TMOUT, ALARM, STAT, TTY, TIME, COMMAND.
@@ -259,85 +257,87 @@
 
     - Gunakan perintah `find` ke seluruh direktory pada sistem, belokkan output sehingga daftar direktori dialihkan ke file `directories.txt` dan daftar pesan error dialihkan ke file `errors.txt`
 
-        ![App Screenshot](img/latihan/2-a.png)
+        ![App Screenshot](img/latihan/11.png)
 
         Analisa:
         Dilihat dari hasil perintah `$ find -Type d > directories.txt 2> errors.txt` berfungsi untuk membelokkan standar output berupa daftar direktori ke dalam file directories.txt, kemudian jika terdapat pesan error, maka akan dibelokkan ke dalam file errors.txt. Namun, isi file tersebut kosong, yang artinya tidak ada pesan error yang muncul selama proses find / dilakukan.
 
     - Gunakan perintah `sleep 5`. Apa yang terjadi dengan perintah ini ?
 
-        ![App Screenshot](img/latihan/2-b.png)
+        ![App Screenshot](img/latihan/12.png)
 
         Analisa:
         Dilihat dari hasil perintah `$ sleep 5` yaitu digunakan untuk menghentikan proses job pada terminal selama 5 detik. `$ sleep` digunakan untuk menghentikan proses job pada terminal selama waktu yang ditentukan. Angka yang diketikkan merupakan durasinya dalam satuan detik.
 
     - Jalankan perintah pada background menggunakan `&`
 
-        ![App Screenshot](img/latihan/2-c.png)
+        ![App Screenshot](img/latihan/14.png)
 
         Analisa:
         Perintah `$ sleep 5 &` digunakan untuk memulai job pada background. Dapat di cek menggunakan perintah `bg`.
 
     - Jalankan `sleep 15` pada foreground, hentikan sementara dengan Ctrl-Z dan kemudian letakkan pada background dengan `bg`. Ketikkan `jobs`. Ketikkan `ps`. Kembalikan job ke foreground dengan perintah `fg`.
 
-        ![App Screenshot](img/latihan/2-d.png)
+        ![App Screenshot](img/latihan/15.png)
 
         Analisa: 
         Kita harus melakukan instruksi dalam range waktu 15 detik agar melihat prosesnya. Setelah proses sleep kita jalankan, kita hentikan sementara menggunakan *Ctrl + Z* lalu kita taruh pada background menggunakan perintah `bg`. Ketika melakukan perintah `$ jobs`, dapat dilihat bahwa job sleep 15 berjalan pada background. Untuk mengecek, lakukan perintah `$ ps` untuk melihat proses/job yang sedang berjalan, terdapat job sleep. Lalu kita kembalikan lagi job ke foreground dengan perintah `fg`
 
     - Jalankan `sleep 15` pada background menggunakan `&` dan kemudian gunakan perintah `kill` untuk menghentikan proses diikuti job number.
 
-        ![App Screenshot](img/latihan/2-e.png)
+        ![App Screenshot](img/latihan/16.png)
 
         Analisa:
         Perintah `$ sleep 15 &` digunakan untuk membuat job berjalan pada background. Untuk mengecek job nya, gunakan perintah `$ ps` dan terdapat proses sleep yang sedang running. Perintah `$ kill %1` digunakan untuk menghentikan proses sleep 15. Untuk mengecek, gunakan perintah `$ ps` yang ditandai dengan tulisan Terminated.
 
     - Jalankan `sleep 15` pada background menggunakan `&` dan kemudian gunakan `kill` untuk menghentikan sementara proses. Gunakan `bg` untuk melanjutkan menjalankan proses.
 
-        ![App Screenshot](img/latihan/2-f.png)
+        ![App Screenshot](img/latihan/17.png)
 
         Analisa:
         Opsi `-19` (SIGSTOP) pada perintah `$ kill -19 %1` digunakan untuk menghentikan proses sementara dengan indikator tulisan Stopped. Kemudian proses dimulai lagi dengan perintah `$ bg`. Untuk mengecek prosesnya, gunakan perintah `$ ps`.
 
     - Jalankan `sleep 60` pada background 5 kali dan terminasi semua pada dengan menggunakan perintah `killall`.
 
-        ![App Screenshot](img/latihan/2-g.png)
+        ![App Screenshot](img/latihan/18.png)
 
         Analisa:
         Perintah `$ sleep 60 &` sebanyak 5 kali digunakan untuk membuat 5 proses sleep pada background yang ditandai dengan 5 nomor job [..] yang berbeda-beda. Perintah `$ killall` yang diikuti dengan nama proses digunakan untuk menerminasi proses dengan command sleep dengan indikator tulisan Terminated.
 
     - Gunakan perintah `ps`, `w` dan `top` untuk menunjukkan semua proses yang sedang dieksekusi.
 
-        ![App Screenshot](img/latihan/2-h-ps-w.png)
+        ![App Screenshot](img/latihan/19.png)
 
-        ![App Screenshot](img/latihan/2-h-top.png)
+        ![App Screenshot](img/latihan/20.png)
 
         Analisa: 
         Dilihat dari hasil, perintah `$ ps` menunjukkan proses status yang sedang aktif. Perintah `$ w` menunjukkan siapa saja user yang aktif. Perintah `$ top` digunakan untuk menunjukkan semua proses yang sedang dieksekusi
 
     - Gunakan perintah `ps –aeH` untuk menampilkan hierarki proses. Carilah init proses. Apakah Anda bisa identifikasi sistem daemon yang penting ? Dapatkan Anda identifikasi shell dan subproses ?
 
-        ![App Screenshot](img/latihan/2-i.png)
+        ![App Screenshot](img/latihan/21.png)
 
-        ![App Screenshot](img/latihan/2-i-bash-ps.png)
+        ![App Screenshot](img/latihan/22.png)
 
-        ![App Screenshot](img/latihan/2-i-systemd.png)
+        ![App Screenshot](img/latihan/23.png)
 
+        ![App Screenshot](img/latihan/23.png)
+      
         Analisa:
         Init process adalah induk dari semua proses pada linux, ditandai dengan PID = 1 yaitu systemd. Sistem daemon yang penting disebut juga dengan init process dengan PID = 1. Selain itu, service deamon ditandai dengan huruf belakangnya d. Untuk shell, terdapat di terminal yang sedang aktif (pts/0) yaitu proses seperti bash dan ps.
 
     - Kombinasikan `ps –fae` dan grep, apa yang Anda lihat ?
 
-        ![App Screenshot](img/latihan/2-j.png)
+        ![App Screenshot](img/latihan/25.png)
 
         Analisa:
         Perintah `$ ps -fae` sendiri digunakan untuk menampilkan semua proses yang sedang berjalan pada mesin. Perintah tersebut bisa dikombinasikan dengan filter grep. Dalam percobaan tersebut, saya mencoba menjalankan perintah `$ ps -fae | grep tty2` yang artinya saya ingin menampilkan proses yang sedang berjalan di tty2 saat ini.
 
     - Jalankan proses `sleep 300` pada background. Log off komputer dan log in kembali. Lihat daftar semua proses yang berjalan. Apa yang terjadi pada proses sleep ?
 
-        ![App Screenshot](img/latihan/2-k-sleep.png)
+        ![App Screenshot](img/latihan/26.png)
 
-        ![App Screenshot](img/latihan/2-k-ps.png)
+        ![App Screenshot](img/latihan/27.png)
 
         Analisa:
         Yang terjadi ialah proses sleep tidak lagi dalam keadaan Running. Hal ini bisa terjadi karena kita keluar dari terminal dan itu otomatis membuat semua proses yang dijalankan oleh user yang log off ikut berhenti.

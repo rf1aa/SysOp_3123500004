@@ -17,7 +17,7 @@
 
 ## Producer Consumer Semaphore
 
-![App Screenshot](img/semaphore.png)
+![App Screenshot](img/Producer-Consumer-Semaphore.png)
 
 Analisa: 
 
@@ -25,7 +25,7 @@ Program diatas contoh implementasi dari Producer Consumer Semaphore problem dala
 
 ## Producer Consumer Wake-Sleep thread
 
-![App Screenshot](img/wake-sleep.png)
+![App Screenshot](img/Wake-sleep-thread.png)
 
 Analisa : 
 

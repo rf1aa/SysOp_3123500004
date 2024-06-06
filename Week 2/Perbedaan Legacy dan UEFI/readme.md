@@ -20,12 +20,12 @@
 2. [Soal](#soal)
 3. [Referensi](#referensi)
 ## apa itu BIOS?
-![App Screenshot](img/bios.jpg)
+![App Screenshot](asset/img/bios.jpg)
 <strong>BIOS </strong>merupakan singkatan dari Basic Input Output System. merupakan suatu software (ditulis dalam bahasa assembly) yang mengatur fungsi dasar dari perangkat keras (hardware) komputer. BIOS tertanam dalam sebuah chip memory (ROM ataupun Flash Memory) berbahan Comlpimentari Metal Oxide Semiconductor (CMOS) yang terdapat pada motherboard. Sebuah baterai yang biasa disebut sebagai baterai CMOS berfungsi untuk menjaga agar tanggal dan settingan lainnya yang telah kita set pada BIOS tidak hilang atau kembali ke konfigurasi awal meskipun komputer dimatikan.
 
 ## apa itu UEFI?
 
-![App Screenshot](img/uefi.png)
+![App Screenshot](asset/img/uefi.png)
 
 <strong>UEFI</strong> adalah Unified Extensible Firmware Interface, UEFI merupakan teknologi terbaru yang dibuat untuk penyempurnaan dari BIOS yang lama menjadi BIOS yang memiliki fungsi lebih optimal.
 Lantas kapan UEFI ada? kehadiran nya bermula saat ada standard EFI pada komputer sekitar tahun 1990 an, saat itulah UEFI muncul. pada tahun tersebut perusahaan yang sudah memakai standar EFI yaitu Intel dan Hp.
@@ -33,7 +33,7 @@ Setelah sekian tahun dan dengan kemajuan teknologi, sistem EFI mulai berkembang 
 Untuk saat ini sistem UEFI sudah banyak dioperasikan di semua komputer maupun laptop generasi terbaru, karena saat ini perkembangan hardware komputer sudah canggih, BIOS sendiri sudah hampir tidak mampu memberikan support, terutama pada pengguna hardisk dengan kapasitas 2 terabyte.
 Jadi fungsi UEFI adalah untuk menggantikan dari kinerja BIOS yang sudah mengalami ketertinggalan zaman
 ## apa itu LEGACY?
-![App Screenshot](img/legacy.png)
+![App Screenshot](asset/img/legacy.png)
 <strong>LEGACY </strong>adalah alat yang membantu firmware Bios dalam memproses boot, dimana fungsi dari legacy yaitu untuk menyimpan daftar perangkat penyimpanan yang bisa untuk di boot seperti floopy disk drives, optical disk drive dan hard disk drive,
 Saat kamu menyalakan komputer, secara tidak langsung BIOS akan beroperasi dan melakukan Power On Self-Test (POST) yang ditandai dengan bunyi bip dari sistem internal, dimana suara tersebut menandakan booting berjalan dengan normal
 
@@ -45,7 +45,7 @@ Ketika dalam proses booting terdapat bagian yang tidak sesuai atau tidak valid, 
 ### SOAL
 ## Apa perbedaan UEFY DAN LEGACY?
 
-![App Screenshot](img/legacyuefi.webp)
+![App Screenshot](asset/img/legacyuefi.webp)
 
 1. Struktur dan Antarmuka
 
@@ -77,7 +77,7 @@ UEFI merupakan standar industri yang aktif berkembang dan mendapatkan dukungan p
 
 ## Proses UEFI dan LEGACY
 
-![App Screenshot](img/flowchart.jpg)
+![App Screenshot](asset/img/flowchart.jpg)
 
 ## Perbedaan dalam Proses
 Proses booting pada UEFI (Unified Extensible Firmware Interface) melibatkan beberapa langkah yang berbeda dibandingkan dengan Legacy BIOS. Berikut adalah langkah-langkah umum dalam proses booting UEFI:

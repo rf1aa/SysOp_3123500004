@@ -21,7 +21,7 @@
 
 ### Output
 
-![App Screenshot](img/mutex1.png)
+![App Screenshot](img/Nomu.png)
 
 ### Analisa
 
@@ -31,7 +31,7 @@ Program ini menggunakan thread untuk memodifikasi variabel global `shared_counte
 
 ### Output 
 
-![App Screenshot](img/mutex2.png)
+![App Screenshot](img/mu.png)
 
 ### Analisa
 
